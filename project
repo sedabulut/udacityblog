@@ -1,0 +1,447 @@
+"    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>id</th>\n",
+              "      <th>pipeline_name</th>\n",
+              "      <th>search_order</th>\n",
+              "      <th>mean_cv_score</th>\n",
+              "      <th>standard_deviation_cv_score</th>\n",
+              "      <th>validation_score</th>\n",
+              "      <th>percent_better_than_baseline</th>\n",
+              "      <th>high_variance_cv</th>\n",
+              "      <th>parameters</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>7</td>\n",
+              "      <td>Extra Trees Classifier w/ Imputer</td>\n",
+              "      <td>7</td>\n",
+              "      <td>0.887205</td>\n",
+              "      <td>0.018958</td>\n",
+              "      <td>0.892506</td>\n",
+              "      <td>38.720539</td>\n",
+              "      <td>False</td>\n",
+              "      <td>{'Imputer': {'categorical_impute_strategy': 'm...</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>3</td>\n",
+              "      <td>Random Forest Classifier w/ Imputer</td>\n",
+              "      <td>3</td>\n",
+              "      <td>0.873658</td>\n",
+              "      <td>0.013643</td>\n",
+              "      <td>0.869779</td>\n",
+              "      <td>37.365775</td>\n",
+              "      <td>False</td>\n",
+              "      <td>{'Imputer': {'categorical_impute_strategy': 'm...</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>6</td>\n",
+              "      <td>XGBoost Classifier w/ Imputer</td>\n",
+              "      <td>6</td>\n",
+              "      <td>0.849162</td>\n",
+              "      <td>0.027477</td>\n",
+              "      <td>0.818182</td>\n",
+              "      <td>34.916166</td>\n",
+              "      <td>False</td>\n",
+              "      <td>{'Imputer': {'categorical_impute_strategy': 'm...</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>3</th>\n",
+              "      <td>5</td>\n",
+              "      <td>Logistic Regression Classifier w/ Imputer + St...</td>\n",
+              "      <td>5</td>\n",
+              "      <td>0.848007</td>\n",
+              "      <td>0.017890</td>\n",
+              "      <td>0.842752</td>\n",
+              "      <td>34.800710</td>\n",
+              "      <td>False</td>\n",
+              "      <td>{'Imputer': {'categorical_impute_strategy': 'm...</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>4</th>\n",
+              "      <td>1</td>\n",
+              "      <td>Elastic Net Classifier w/ Imputer + Standard S...</td>\n",
+              "      <td>1</td>\n",
+              "      <td>0.847393</td>\n",
+              "      <td>0.016866</td>\n",
+              "      <td>0.842752</td>\n",
+              "      <td>34.739285</td>\n",
+              "      <td>False</td>\n",
+              "      <td>{'Imputer': {'categorical_impute_strategy': 'm...</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>5</th>\n",
+              "      <td>4</td>\n",
+              "      <td>LightGBM Classifier w/ Imputer</td>\n",
+              "      <td>4</td>\n",
+              "      <td>0.842994</td>\n",
+              "      <td>0.013211</td>\n",
+              "      <td>0.837224</td>\n",
+              "      <td>34.299356</td>\n",
+              "      <td>False</td>\n",
+              "      <td>{'Imputer': {'categorical_impute_strategy': 'm...</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>6</th>\n",
+              "      <td>8</td>\n",
+              "      <td>CatBoost Classifier w/ Imputer</td>\n",
+              "      <td>8</td>\n",
+              "      <td>0.821640</td>\n",
+              "      <td>0.023350</td>\n",
+              "      <td>0.796069</td>\n",
+              "      <td>32.163982</td>\n",
+              "      <td>False</td>\n",
+              "      <td>{'Imputer': {'categorical_impute_strategy': 'm...</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>7</th>\n",
+              "      <td>2</td>\n",
+              "      <td>Decision Tree Classifier w/ Imputer</td>\n",
+              "      <td>2</td>\n",
+              "      <td>0.722694</td>\n",
+              "      <td>0.052690</td>\n",
+              "      <td>0.746929</td>\n",
+              "      <td>22.269429</td>\n",
+              "      <td>False</td>\n",
+              "      <td>{'Imputer': {'categorical_impute_strategy': 'm...</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>8</th>\n",
+              "      <td>0</td>\n",
+              "      <td>Mode Baseline Binary Classification Pipeline</td>\n",
+              "      <td>0</td>\n",
+              "      <td>0.500000</td>\n",
+              "      <td>0.000000</td>\n",
+              "      <td>0.500000</td>\n",
+              "      <td>0.000000</td>\n",
+              "      <td>False</td>\n",
+              "      <td>{'Baseline Classifier': {'strategy': 'mode'}}</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>"
+            ],
+            "text/plain": [
+              "   id  ...                                         parameters\n",
+              "0   7  ...  {'Imputer': {'categorical_impute_strategy': 'm...\n",
+              "1   3  ...  {'Imputer': {'categorical_impute_strategy': 'm...\n",
+              "2   6  ...  {'Imputer': {'categorical_impute_strategy': 'm...\n",
+              "3   5  ...  {'Imputer': {'categorical_impute_strategy': 'm...\n",
+              "4   1  ...  {'Imputer': {'categorical_impute_strategy': 'm...\n",
+              "5   4  ...  {'Imputer': {'categorical_impute_strategy': 'm...\n",
+              "6   8  ...  {'Imputer': {'categorical_impute_strategy': 'm...\n",
+              "7   2  ...  {'Imputer': {'categorical_impute_strategy': 'm...\n",
+              "8   0  ...      {'Baseline Classifier': {'strategy': 'mode'}}\n",
+              "\n",
+              "[9 rows x 9 columns]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 40
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TH-FlIARXEW-",
+        "outputId": "6229d80a-5991-4ef5-9a06-ff6134add7af"
+      },
+      "source": [
+        "automl_auc.describe_pipeline(automl_auc.rankings.iloc[0][\"id\"])"
+      ],
+      "id": "TH-FlIARXEW-",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "\n",
+            "*************************************\n",
+            "* Extra Trees Classifier w/ Imputer *\n",
+            "*************************************\n",
+            "\n",
+            "Problem Type: binary\n",
+            "Model Family: Extra Trees\n",
+            "\n",
+            "Pipeline Steps\n",
+            "==============\n",
+            "1. Imputer\n",
+            "\t * categorical_impute_strategy : most_frequent\n",
+            "\t * numeric_impute_strategy : mean\n",
+            "\t * categorical_fill_value : None\n",
+            "\t * numeric_fill_value : None\n",
+            "2. Extra Trees Classifier\n",
+            "\t * n_estimators : 100\n",
+            "\t * max_features : auto\n",
+            "\t * max_depth : 6\n",
+            "\t * min_samples_split : 2\n",
+            "\t * min_weight_fraction_leaf : 0.0\n",
+            "\t * n_jobs : -1\n",
+            "\n",
+            "Training\n",
+            "========\n",
+            "Training for binary problems.\n",
+            "Total training time (including CV): 2.1 seconds\n",
+            "\n",
+            "Cross Validation\n",
+            "----------------\n",
+            "              AUC    F1  Precision # Training # Validation\n",
+            "0           0.893 0.738      0.857        161           81\n",
+            "1           0.903 0.822      0.833        161           81\n",
+            "2           0.866 0.712      0.913        162           80\n",
+            "mean        0.887 0.757      0.868          -            -\n",
+            "std         0.019 0.057      0.041          -            -\n",
+            "coef of var 0.021 0.076      0.047          -            -\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "b1wGri8TXZeQ"
+      },
+      "source": [
+        "best_pipeline_auc = automl_auc.best_pipeline\n"
+      ],
+      "id": "b1wGri8TXZeQ",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "54h-Baa9XK-O",
+        "outputId": "abbd810b-0649-4f01-ab3d-2058a29568ce"
+      },
+      "source": [
+        "\n",
+        "# get the score on holdout data\n",
+        "best_pipeline_auc.score(X_test, y_test,  objectives=[\"auc\"])"
+      ],
+      "id": "54h-Baa9XK-O",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "OrderedDict([('AUC', 0.8852813852813852)])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 43
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Pg7y2nmMXclD"
+      },
+      "source": [
+        "We got an 88.5 % AUC Score which is the highest of all"
+      ],
+      "id": "Pg7y2nmMXclD"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "aRxjGGYFXph4"
+      },
+      "source": [
+        "Save the model"
+      ],
+      "id": "aRxjGGYFXph4"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "w33nw9rdXh8o"
+      },
+      "source": [
+        "best_pipeline.save(\"model.pkl\")"
+      ],
+      "id": "w33nw9rdXh8o",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "0Axq_oghX11b"
+      },
+      "source": [
+        "Loading our Model"
+      ],
+      "id": "0Axq_oghX11b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "BBoBF8ExX1Xj"
+      },
+      "source": [
+        "\n",
+        "final_model=automl.load('model.pkl')"
+      ],
+      "id": "BBoBF8ExX1Xj",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 417
+        },
+        "id": "KGRC-26vXqyy",
+        "outputId": "3cacd929-8b89-4d45-c424-fe1d80c049e0"
+      },
+      "source": [
+        "final_model.predict_proba(X_test)"
+      ],
+      "id": "KGRC-26vXqyy",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/html": [
+              "<div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>0</th>\n",
+              "      <th>1</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>0.468324</td>\n",
+              "      <td>0.531676</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>0.093848</td>\n",
+              "      <td>0.906152</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>0.383646</td>\n",
+              "      <td>0.616354</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>3</th>\n",
+              "      <td>0.107272</td>\n",
+              "      <td>0.892728</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>4</th>\n",
+              "      <td>0.141027</td>\n",
+              "      <td>0.858973</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>...</th>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>56</th>\n",
+              "      <td>0.268136</td>\n",
+              "      <td>0.731864</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>57</th>\n",
+              "      <td>0.846652</td>\n",
+              "      <td>0.153348</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>58</th>\n",
+              "      <td>0.861607</td>\n",
+              "      <td>0.138393</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>59</th>\n",
+              "      <td>0.739515</td>\n",
+              "      <td>0.260485</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>60</th>\n",
+              "      <td>0.878833</td>\n",
+              "      <td>0.121167</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "<p>61 rows × 2 columns</p>\n",
+              "</div>"
+            ],
+            "text/plain": [
+              "           0         1\n",
+              "0   0.468324  0.531676\n",
+              "1   0.093848  0.906152\n",
+              "2   0.383646  0.616354\n",
+              "3   0.107272  0.892728\n",
+              "4   0.141027  0.858973\n",
+              "..       ...       ...\n",
+              "56  0.268136  0.731864\n",
+              "57  0.846652  0.153348\n",
+              "58  0.861607  0.138393\n",
+              "59  0.739515  0.260485\n",
+              "60  0.878833  0.121167\n",
+              "\n",
+              "[61 rows x 2 columns]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 49
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "z9YhBxmqX68S"
+      },
+      "source": [
+        ""
+      ],
+      "id": "z9YhBxmqX68S",
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
